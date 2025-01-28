@@ -21,16 +21,7 @@ echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
 # sed -i 's/192.168.1.1/192.168.31.4/g' package/base-files/files/bin/config_generate
 # 修改默认 IP 地址为 192.168.1.200
-sed -i "s/192.168.1.1/192.168.1.200/g" package/base-files/files/bin/config_generate
 
-# 添加默认网关为 192.168.1.1
-sed -i "/set network.lan.ipaddr/a\uci set network.lan.gateway='192.168.1.1'" package/base-files/files/bin/config_generate
-
-# 添加默认 DNS 为 223.6.6.6 和 8.8.8.8
-sed -i "/set network.lan.gateway/a\uci set network.lan.dns='223.6.6.6 8.8.8.8'" package/base-files/files/bin/config_generate
-
-# 提交配置
-sed -i "/set network.lan.dns/a\uci commit network" package/base-files/files/bin/config_generate
 # Replace the default software source
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
 #
