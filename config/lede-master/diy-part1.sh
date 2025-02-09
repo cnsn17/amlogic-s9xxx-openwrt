@@ -10,7 +10,7 @@
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 # only needs to be run once
 # sed -i '$a src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki' feeds.conf.default
-
+sed -i '$a src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main' feeds.conf.default
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
